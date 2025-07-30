@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ольга Миронова](https://up.htmlacademy.ru/htmlcss-individual/2/user/1307951).
-* Наставник: [Екатерина Комнатная - "The Nastavnik!"](https://htmlacademy.ru/profile/id215761).
+* Наставник: [Екатерина Комнатная - "The Mentor!"](https://htmlacademy.ru/profile/id215761).
 * Сайт ["Sedona" - web site by Olga](https://gerry2923.github.io/1307951-sedona-2/)
 
 ---
