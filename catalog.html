@@ -20,7 +20,7 @@
             <a href="about.html" class="navigation__link">О Cедоне</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--current">Гостиницы</a>
+            <a class="navigation__link navigation__link--current" aria-current="page">Гостиницы</a>
           </li>
         </ul>
 
@@ -189,8 +189,11 @@
 
         <ul class="product-card__list">
           <li class="product-card__item card">
-            <a class="card__header-link" href="#">
+            <a class="card__header-link" href="#"> <!--tabindex="-1"-->
               <img class="card__picture" src="#" alt="Ущелье ночью">
+            </a>
+
+            <a class="card__header-link" href="#">
               <h3 class="card__title">Amara Resort & Spa</h3>
             </a>
 
@@ -208,7 +211,9 @@
             </div>
 
             <div class="card__rating">
-              <p class="card__rating-stars"><span class="visually-hidden">Четырехзвездочный отель</span></p>
+              <p class="card__rating-stars card__rating-stars--4">
+                <span class="visually-hidden">Четырехзвездочный отель</span>
+              </p>
               <p class="card__rating-text">Рейтинг:<span class="card__rating-value">9,2</span></p>
             </div>
           </li>
@@ -216,6 +221,9 @@
           <li class="product-card__item card">
             <a class="card__header-link" href="#">
               <img class="card__picture" src="#" alt="Горы на фоне радуги">
+            </a>
+
+            <a class="card__header-link" href="#">
               <h3 class="card__title">Villas at Poco Diablo</h3>
             </a>
 
@@ -233,7 +241,7 @@
             </div>
 
             <div class="card__rating">
-              <p class="card__rating-stars"><span class="visually-hidden">Четырехзвездочный отель</span></p>
+              <p class="card__rating-stars card__rating-stars--4"><span class="visually-hidden">Четырехзвездочный отель</span></p>
               <p class="card__rating-text">Рейтинг:<span class="card__rating-value">9,2</span></p>
             </div>
           </li>
@@ -241,6 +249,8 @@
           <li class="product-card__item card">
             <a class="card__header-link" href="#">
               <img class="card__picture" src="#" alt="Горный рассвет">
+            </a>
+            <a class="card__header-link" href="#">
               <h3 class="card__title">Desert Quail Inn</h3>
             </a>
 
@@ -258,7 +268,9 @@
             </div>
 
             <div class="card__rating">
-              <p class="card__rating-stars"><span class="visually-hidden">Трехзвездочный отель</span></p>
+              <p class="card__rating-stars card__rating-stars--3">
+                <span class="visually-hidden">Трехзвездочный отель</span>
+              </p>
               <p class="card__rating-text">Рейтинг:<span class="card__rating-value">6,9</span></p>
             </div>
           </li>
@@ -266,6 +278,8 @@
           <li class="product-card__item card">
             <a class="card__header-link" href="#">
               <img class="card__picture" src="#" alt="Каньон на фоне ночного неба">
+            </a>
+            <a class="card__header-link" href="#">
               <h3 class="card__title">GreenTree Inn</h3>
             </a>
 
@@ -283,7 +297,8 @@
             </div>
 
             <div class="card__rating">
-              <p class="card__rating-stars"><span class="visually-hidden">Двухзвездочный отель</span></p>
+              <p class="card__rating-stars card__rating-stars--2">
+                <span class="visually-hidden">Двухзвездочный отель</span></p>
               <p class="card__rating-text">Рейтинг:<span class="card__rating-value">5,0</span></p>
             </div>
           </li>
@@ -291,29 +306,29 @@
 
         <ol class="product-card__pagination pagination">
           <li class="pagination__item">
-            <a  class="pagination__link pagination__link--current" href="#">
-              <span class="visually-hidden">Номер страницы</span> 1</a>
-            </li>
+            <a class="pagination__link pagination__link--current" href="#" aria-current="page">
+              <span class="visually-hidden">Номер страницы</span>1</a>
+          </li>
           <li class="pagination__item">
-            <a  class="pagination__link" href="#">
-              <span class="visually-hidden">Номер страницы</span> 2</a>
-            </li>
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">Номер страницы</span>2</a>
+          </li>
           <li class="pagination__item">
-            <a  class="pagination__link" href="#">
-              <span class="visually-hidden">Номер страницы</span> 3</a>
-            </li>
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">Номер страницы</span>3</a>
+          </li>
           <li class="pagination__item">
-            <a  class="pagination__link" href="#">
-              <span class="visually-hidden">Номер страницы</span> 4</a>
-            </li>
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">Номер страницы</span>4</a>
+          </li>
           <li class="pagination__item">
-            <button  class="pagination__button" type="button">
-              <span class="visually-hidden">Номер страницы </span>&hellip;</button>
-            </li>
+            <button class="pagination__button" type="button">
+              <span class="visually-hidden">Номер страницы</span>&hellip;</button>
+          </li>
           <li class="pagination__item">
-            <a  class="pagination__link" href="#">
-              <span class="visually-hidden">Номер страницы</span> 10</a>
-            </li>
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">Номер страницы</span>10</a>
+          </li>
         </ol>
       </section>
 
