@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body style="background-color: Gainsboro;">
   <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
 
   <header class="page-header">
 
-    <img class="logo" src="#" alt="Логотип турагенства «Sity of Sedona»">
+    <a class="page-header__logo" href="index.html">
+      <img class="logo" src="images/content/logo.svg"  width="140" height="70" alt="Логотип турагенства «Sity of Sedona»">
+    </a>
 
     <nav class="navigation">
       <ul class="navigation__list">
@@ -49,7 +51,7 @@
 
      <section class="promo">
       <h2 class="visually-hidden">Приглашаем вас в великолепную Седону!</h2>
-      <img class="promo__picture" src="#" alt="Welcome to the gargeous Sedona «Because the Grand Canyon sucks!»">
+      <img class="promo__picture" src="images/content/welcome.svg" width="458" height="352" alt="Welcome to the gargeous Sedona «Because the Grand Canyon sucks!»">
      </section>
 
     <section class="advantages">
@@ -62,7 +64,7 @@
           <h3 class="advantages__title title title--small">Настоящий городок</h3>
           <p class="advantages__subtitle subtitle subtitle--small">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 
-          <img class="advantages__img image" src="#" alt="Живописный вид улицы в городе Седона">
+          <img class="advantages__img image" src="images/content/photo-1.jpg" width="800" height="385" alt="Живописный вид улицы в городе Седона">
         </li>
         <li class="advantages__item">
           <h3 class="advantages__title title title--small">Небольшая площадь</h3>
@@ -80,7 +82,7 @@
           <h3 class="advantages__title title title--small">Там есть мост дьявола</h3>
           <p class="advantages__subtitle subtitle subtitle--small">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
 
-          <img class="advantages__img image" src="#" alt="Вид на Мост Дьявола в городе Седона">
+          <img class="advantages__img image" src="images/content/photo-2.jpg" width="800" height="385" alt="Вид на Мост Дьявола в городе Седона">
         </li>
       </ul>
     </section>
@@ -152,7 +154,10 @@
     <a class="main-footer__contact" href="tel:+79992225665" >+7 (812) 812-12-12</a>
 
     <a class="main-footer__link-logo" href="https://htmlacademy.ru/study" >
-      <img class="main-footer__logo" src="#" alt="логотип разработчиков htmlacademy" width="115" height="33">
+
+      <!-- Добавить логотип с помощью маски -->
+
+      <!--<img class="main-footer__logo" src="images/icons/logo_htmlacademy.svg" width="115" height="33" alt="логотип разработчиков htmlacademy" >-->
     </a>
   </footer>
   </body>
