@@ -20,7 +20,7 @@
   --background-basic-1:  #ffffff;
   --background-basic-2: #82b3d3;
   --background-basic-3: rgba(0, 0, 0, 0);
-  --background-second-1: rgba(131, 179, 211, 0.12);  /*#83b3d31f;  */
+  --background-second-1: rgba(131, 179, 211, 0.12);  /*#83b3d31f; */
   --background-second-2:  rgba(131, 179, 211, 0.2); /*#83b3d333; */
 
 
@@ -51,11 +51,6 @@
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
-}
-
-body * {
-  outline: 1px dotted goldenrod;
-  outline-offset: -1px;
 }
 
 body {
@@ -383,7 +378,6 @@ body {
   border-color: var(--icnos-basic);
 }
 
-
 /* Product card */
 
 .product-card {
@@ -392,4 +386,57 @@ body {
 
 .card__info > dd {
   color: var(--text-text-second);
+}
+
+.card__rating-text {
+  background-color: var(--backgroundd-basic-0);
+}
+
+.card__rating-text,
+.card__rating-value {
+  color: var(--text-text-second);
+  font-size: 16px;
+  line-height: 20px;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+.pagination__link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: var(--text-text-on-background);
+}
+
+.pagination__link--current,
+.pagination__button {
+  color: var(--text-text-basic);
+}
+
+.pagination__item {
+  background-color: var(--background-basic-2);
+}
+
+.pagination__item:has( > .pagination__link--current) {
+  background-color: var(--form-elements);
+}
+
+.pagination__item:has( > .pagination__button) {
+  background-color: var(--background-basic-1);
+}
+
+.pagination__button {
+  background-color: var(--background-basic-3);
+  border: none;
+}
+
+.main-inner .subscribe {
+  background-color: var(--background-basic-1);
+  background-image: unset;
+}
+
+.main-inner .subscribe__title,
+.main-inner .subscribe__subtitle {
+  color: var(--text-text-basic);
 }
