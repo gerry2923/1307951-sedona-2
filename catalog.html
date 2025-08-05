@@ -11,7 +11,8 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="logo" src="images/content/logo.svg" width="140" height="70" alt="Логотип турагенства «Sity of Sedona»">
+        <img class="logo" src="images/logos/logo.svg" width="140" height="70"
+          alt="Логотип турагенства «Sity of Sedona»">
       </a>
 
       <nav class="navigation">
@@ -35,137 +36,140 @@
           </li>
           <li class="navigation__item-icon">
             <a href="#" class="navigation__link-icon">
-              <span class="visually-hidden">Добавить лайк</span>
+              <span class="visually-hidden">Избранное</span>
+              <span class="navigation__item-number">12</span>
             </a>
           </li>
         </ul>
 
-        <button class="button button_broun" type="button">
+        <button class="button button--color-1" type="button">Хочу сюда!
           <span class="visually-hidden">Забронировать</span>
         </button>
       </nav>
     </header>
 
     <main class="main-inner">
+      <div class="container main-inner__header-container">
+        <h1 class="main-inner__header">Гостиницы седоны</h1>
 
-      <h1 class="main-inner__header">Гостиницы седоны</h1>
+        <nav class="main-inner__breadcrumbs breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="index.html">
+                <span class="visually-hidden">Перейти на главную страницу</span>
+              </a>
+            </li>
 
-      <nav class="main-inner__breadcrumbs breadcrumbs">
-        <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">
-              <span class="visually-hidden">Перейти на главную страницу</span>
-            </a>
-          </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" aria-current="page"> <!-- !!-->
+                Гостиницы
+              </a>
+            </li>
+          </ol>
+        </nav>
 
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" aria-current="page"> <!-- !!-->
-              Гостиницы
-            </a>
-          </li>
-        </ol>
-      </nav>
+        <section class="main-inner__filters filters">
+          <h2 class="visually-hidden">Параметры выбора гостиницы</h2>
 
-      <section class="main-inner__filters filters">
-        <h2 class="visually-hidden">Параметры выбора гостиницы</h2>
+          <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filters__group">
+              <legend class="filters__title">Инфраструктура:</legend>
 
-        <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filters__group">
-            <legend class="filters__title">Инфраструктура:</legend>
-
-            <ol class="filters__list infrastructure">
-              <li class="infrastructure__item">
-                <label class="infrastructure__label label">
-                  <input class="infrastructure__option" type="checkbox" name="swiming-pool" value="on" checked>
-                  Бассейн
-                </label>
-              </li>
-
-              <li class="infrastructure__item">
-                <label class="infrastructure__label label">
-                  <input class="infrastructure__option" type="checkbox" name="parking" value="on" checked>
-                  Парковка
-                </label>
-              </li>
-
-              <li class="infrastructure__item">
-                <label class="infrastructure__label label">
-                  <input class="infrastructure__option" type="checkbox" name="wifi" value="off">
-                  Wi-Fi
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-
-          <fieldset class="filters__group">
-            <legend class="filters__title">Тип Жилья:
-              <ol class="filters__house-type-list house-type">
-                <li class="house-type__item">
-                  <label class="house-type__label label">
-                    <input class="house-type__option" type="radio" name="house-type" value="hotel" checked>
-                    Гостиницы
+              <ol class="filters__list infrastructure">
+                <li class="infrastructure__item">
+                  <label class="infrastructure__label label">
+                    <input class="infrastructure__option" type="checkbox" name="swiming-pool" value="on" checked>
+                    Бассейн
                   </label>
                 </li>
-                <li class="house-type__item">
-                  <label class="house-type__label label">
-                    <input class="house-type__option" type="radio" name="house-type" value="Motel">
-                    Мотель
+
+                <li class="infrastructure__item">
+                  <label class="infrastructure__label label">
+                    <input class="infrastructure__option" type="checkbox" name="parking" value="on" checked>
+                    Парковка
                   </label>
                 </li>
-                <li class="house-type__item">
-                  <label class="house-type__label label">
-                    <input class="house-type__option" type="radio" name="house-type" value="Apartments">
-                    Апартаменты
+
+                <li class="infrastructure__item">
+                  <label class="infrastructure__label label">
+                    <input class="infrastructure__option" type="checkbox" name="wifi" value="off">
+                    Wi-Fi
                   </label>
                 </li>
               </ol>
-            </legend>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="filters__group">
-            <legend class="filters__title">Стоимость, &#8381;:</legend>
+            <fieldset class="filters__group">
+              <legend class="filters__title">Тип Жилья:
+                <ol class="filters__house-type-list house-type">
+                  <li class="house-type__item">
+                    <label class="house-type__label label">
+                      <input class="house-type__option" type="radio" name="house-type" value="hotel" checked>
+                      Гостиницы
+                    </label>
+                  </li>
+                  <li class="house-type__item">
+                    <label class="house-type__label label">
+                      <input class="house-type__option" type="radio" name="house-type" value="Motel">
+                      Мотель
+                    </label>
+                  </li>
+                  <li class="house-type__item">
+                    <label class="house-type__label label">
+                      <input class="house-type__option" type="radio" name="house-type" value="Apartments">
+                      Апартаменты
+                    </label>
+                  </li>
+                </ol>
+              </legend>
+            </fieldset>
 
-            <div class="filters__price range">
-              <p class="range__inputs">
-                <label class="range__label" for="min-price">От</label>
-                <input class="range__input" type="number" id="min-price" name="min-price" min="0" max="8999" value="0">
-                </input>
+            <fieldset class="filters__group">
+              <legend class="filters__title">Стоимость, &#8381;:</legend>
 
-                <label class="range__label" for="max-price">До</label>
-                <input class="range__input" type="number" id="max-price" name="max-price" min="1" max="9000"
-                  value="9000">
-                </input>
-              </p>
+              <div class="filters__price range">
+                <p class="range__inputs">
+                  <label class="range__label label" for="min-price">От</label>
+                  <input class="range__input" type="number" id="min-price" name="min-price" min="0" max="8999"
+                    value="0">
+                  </input>
 
-              <p class="range__slider slider">
-                <button class="slider__button" type="button">
-                  <span class="visually-hidden">Минимальная цена товара</span>
-                </button>
+                  <label class="range__label label" for="max-price">До</label>
+                  <input class="range__input" type="number" id="max-price" name="max-price" min="1" max="9000"
+                    value="9000">
+                  </input>
+                </p>
 
-                <span class="slider__progress"></span>
+                <p class="range__slider slider">
+                  <button class="slider__button" type="button">
+                    <span class="visually-hidden">Минимальная цена товара</span>
+                  </button>
 
-                <button class="slider__button" type="button">
-                  <span class="visuallly-hidden">Максимальная цена товара</span>
-                </button>
-              </p>
-            </div>
+                  <span class="slider__progress"></span>
 
-          </fieldset>
+                  <button class="slider__button" type="button">
+                    <span class="visuallly-hidden">Максимальная цена товара</span>
+                  </button>
+                </p>
+              </div>
 
-          <button class="button button--blue" type="submit">Применить</button>
-          <button class="button button--transparent" type="reset">Сбросить</button>
+            </fieldset>
 
-        </form>
-      </section>
+            <button class="button button--color-2" type="submit">Применить</button>
+            <button class="button button--color-4" type="reset">Сбросить</button>
+
+          </form>
+        </section>
+      </div>
 
       <section class="main-inner__view-settings view-settings">
         <h2 class="visually-hidden">Настройки отображения страницы каталога</h2>
-        <p class="view-settings__title">Найдено гостиниц: <span>38</span></p>
+        <p class="view-settings__title title">Найдено гостиниц: <span class="title">38</span></p>
 
         <select class="view-settings__sorting" aria-label="Сортировка">
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-          <option value="popular">Сначала популярные</option>
+          <option class="view-settings__sorting-option" value="cheap">Сначала дешевые</option>
+          <option class="view-settings__sorting-option" value="expensive">Сначала дорогие</option>
+          <option class="view-settings__sorting-option" value="popular">Сначала популярные</option>
         </select>
 
         <ul class="view-settings__view-type-list">
@@ -191,26 +195,27 @@
         <h2 class="visually-hidden">Карточки товаров</h2>
 
         <ul class="product-card__list">
+
           <li class="product-card__item card">
             <a class="card__header-link" href="#"> <!--tabindex="-1"-->
               <img class="card__picture" src="images/content/hotel-1.jpg" width="300" height="212" alt="Ущелье ночью">
             </a>
 
             <a class="card__header-link" href="#">
-              <h3 class="card__title">Amara Resort & Spa</h3>
+              <h3 class="card__title title title--small">Amara Resort & Spa</h3>
             </a>
 
             <dl class="card__info">
               <dt class="visually-hidden">Тип жилья</dt>
-              <dd>Гостиница</dd>
+              <dd class="subtitle subtitle--small">Гостиница</dd>
 
               <dt class="visually-hidden">Цена</dt>
-              <dd>От 4000 &#8381;</dd>
+              <dd class="subtitle subtitle--small">От 4000 &#8381;</dd>
             </dl>
 
             <div class="card__controls">
-              <a class="card__link button button--brown" href="#">подробнее</a>
-              <button class="button button--blue" type="button">в избранное</button>
+              <a class="card__link button button--color-1" href="#">подробнее</a>
+              <button class="button button--color-3" type="button">в избранное</button>
             </div>
 
             <div class="card__rating">
@@ -223,19 +228,20 @@
 
           <li class="product-card__item card">
             <a class="card__header-link" href="#">
-              <img class="card__picture" src="images/content/hotel-2.jpg" width="300" height="212" alt="Горы на фоне радуги">
+              <img class="card__picture" src="images/content/hotel-2.jpg" width="300" height="212"
+                alt="Горы на фоне радуги">
             </a>
 
             <a class="card__header-link" href="#">
-              <h3 class="card__title">Villas at Poco Diablo</h3>
+              <h3 class="card__title title title--small">Villas at Poco Diablo</h3>
             </a>
 
             <dl class="card__info">
               <dt class="visually-hidden">Тип жилья</dt>
-              <dd>Гостиница</dd>
+              <dd class="subtitle subtitle--small">Гостиница</dd>
 
               <dt class="visually-hidden">Цена</dt>
-              <dd>От 5000 &#8381;</dd>
+              <dd class="subtitle subtitle--small">От 5000 &#8381;</dd>
             </dl>
 
             <div class="card__controls">
@@ -255,15 +261,15 @@
               <img class="card__picture" src="images/content/hotel-3.jpg" width="300" height="212" alt="Горный рассвет">
             </a>
             <a class="card__header-link" href="#">
-              <h3 class="card__title">Desert Quail Inn</h3>
+              <h3 class="card__title title title--small">Desert Quail Inn</h3>
             </a>
 
             <dl class="card__info">
               <dt class="visually-hidden">Тип жилья</dt>
-              <dd>Гостиница</dd>
+              <dd class="subtitle subtitle--small">Гостиница</dd>
 
               <dt class="visually-hidden">Цена</dt>
-              <dd>От 2500 &#8381;</dd>
+              <dd class="subtitle subtitle--small">От 2500 &#8381;</dd>
             </dl>
 
             <div class="card__controls">
@@ -281,18 +287,19 @@
 
           <li class="product-card__item card">
             <a class="card__header-link" href="#">
-              <img class="card__picture" src="images/content/hotel-4.jpg" width="300" height="212" alt="Каньон на фоне ночного неба">
+              <img class="card__picture" src="images/content/hotel-4.jpg" width="300" height="212"
+                alt="Каньон на фоне ночного неба">
             </a>
             <a class="card__header-link" href="#">
-              <h3 class="card__title">GreenTree Inn</h3>
+              <h3 class="card__title title title--small">GreenTree Inn</h3>
             </a>
 
             <dl class="card__info">
               <dt class="visually-hidden">Тип жилья</dt>
-              <dd>Гостиница</dd>
+              <dd class="subtitle subtitle--small">Гостиница</dd>
 
               <dt class="visually-hidden">Цена</dt>
-              <dd>От 1500 &#8381;</dd>
+              <dd class="subtitle subtitle--small">От 1500 &#8381;</dd>
             </dl>
 
             <div class="card__controls">
@@ -377,25 +384,19 @@
       <a class="main-footer__contact" href="tel:+79992225665">+7 (812) 812-12-12</a>
 
       <a class="main-footer__link-logo" href="https://htmlacademy.ru/study">
-        <svg
-        class="logo"
-        xmlns="http://www.w3.org/2000/svg"
-        width="115"
-        height="34"
-        role="img"
-        aria-label="Логотип разработчиков htmlacademy"
-        fill="none">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="115" height="34" role="img"
+          aria-label="Логотип разработчиков htmlacademy" fill="none">
 
-        <g fill="#000" clip-path="url(#a)">
-          <path
-            d="M0 13.2564v2.6h2.5v-2.6H0Zm11.6-8.39995c-1.6 0-2.8.7-3.6 1.7h-.1V.356445h-2V15.8564h2v-5.3c0-2.09995 1.3-3.59995 3.3-3.59995 1.8 0 2.9 1.4 2.9 3.19995v5.7h2V9.75644c.1-3-1.8-4.89999-4.5-4.89999Zm15 .3h-4.8v-3.7h-2v3.8h-1.9v2h1.9v5.99995c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V7.15645h4.8v-2Zm14.5-.2c-1.6 0-2.9.79999-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29V15.7564h2v-5.4c0-1.99995 1-3.49995 2.6-3.49995 1.5 0 2.4 1 2.4 2.6v6.29995h2v-5.6c0-2.39995 1.4-3.29995 2.6-3.29995 1.5 0 2.4 1 2.4 2.6v6.29995h2V9.25644c.1-2.5-1.4-4.29999-3.9-4.29999Zm6.7 8.09995c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.356445h-2V13.0564Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6Zm18.9-5.1c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" />
-        </g>
-        <defs>
-          <clipPath id="a">
-            <path fill="#fff" d="M0 .356445h115v33H0z" />
-          </clipPath>
-        </defs>
-      </svg>
+          <g fill="#000" clip-path="url(#a)">
+            <path
+              d="M0 13.2564v2.6h2.5v-2.6H0Zm11.6-8.39995c-1.6 0-2.8.7-3.6 1.7h-.1V.356445h-2V15.8564h2v-5.3c0-2.09995 1.3-3.59995 3.3-3.59995 1.8 0 2.9 1.4 2.9 3.19995v5.7h2V9.75644c.1-3-1.8-4.89999-4.5-4.89999Zm15 .3h-4.8v-3.7h-2v3.8h-1.9v2h1.9v5.99995c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V7.15645h4.8v-2Zm14.5-.2c-1.6 0-2.9.79999-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29V15.7564h2v-5.4c0-1.99995 1-3.49995 2.6-3.49995 1.5 0 2.4 1 2.4 2.6v6.29995h2v-5.6c0-2.39995 1.4-3.29995 2.6-3.29995 1.5 0 2.4 1 2.4 2.6v6.29995h2V9.25644c.1-2.5-1.4-4.29999-3.9-4.29999Zm6.7 8.09995c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.356445h-2V13.0564Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6Zm18.9-5.1c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" />
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="#fff" d="M0 .356445h115v33H0z" />
+            </clipPath>
+          </defs>
+        </svg>
       </a>
 
 
