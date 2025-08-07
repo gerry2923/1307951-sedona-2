@@ -1,44 +1,38 @@
 :root {
-  --text-text-basic: #000000;
-  --text-text-second: #333333;
-  --text-text-on-background: #ffffff;
-  --text-text-active-button: rgba(255, 255, 255, 0.3);
-  --text-text-filter-1:  rgba(0, 0,  0, 0.3);
-  --text-text-filter-2:  rgba(0, 0,  0, 0.1);
-  --text-text-filter-3:  rgba(0, 0,  0, 0.6);
+  --text-color-headers: #000000;
+  --text-color-basic-text: #333333;
+  --text-color-on-dark-background: #ffffff;
+  --text-button-active: rgba(255, 255, 255, 0.3);
+  --text-button-reset:  rgba(0, 0,  0, 0.1);
+  --text-label-color:  rgba(0, 0,  0, 0.3);
   --text-error: #ff5757;
 
-  --button-basic: #756157;
-  --button-basic-hover: #615048;
-  --button-second: #82b3d3;
-  --button-second-hover: #68A2CA;
-  --button-select: #7db54f;
-  --button-select-hover: #6C9E42;
-  --button-disabled: #E5E5E5;
+  --button-background: #756157;
+  --button-background-hover: #615048;
+  --button-form-background: #82b3d3;
+  --button-form-background-hover: #68A2CA;
+  --button-favorite-background: #7db54f;
+  --button-favorite-background-hover: #6C9E42;
+  --button-disabled-color: #E5E5E5;
 
-  --backgroundd-basic-0: #f2f2f2;
-  --background-basic-1:  #ffffff;
-  --background-basic-2: #82b3d3;
-  --background-basic-3: rgba(0, 0, 0, 0);
-  --background-second-1: rgba(131, 179, 211, 0.12);  /*#83b3d31f; */
-  --background-second-2:  rgba(131, 179, 211, 0.2); /*#83b3d333; */
+  --page-background-color-darker: #f2f2f2;
+  --page-background-color:  #ffffff;
+  --background-advantages-color-dark: #82b3d3;
+  --background-service-color-light: rgba(131, 179, 211, 0.12);  /*#83b3d31f; */
+  --background-service-color:  rgba(131, 179, 211, 0.2); /*#83b3d333; */
 
+  --icons-color-dark: #000000;
 
-  --icnos-basic: #000000;
-  --icons-second: #83b3d3;
-  --icons-text: #7db54f;
+  --form-color-disabled: #e5e5e5;
+  --pagination-color-current: #f2f2f2;
 
-  --form-input: #3F5E72;
-  --form-disabled: #e5e5e5;
-  --form-elements: #f2f2f2;
-
-  --element-decore-1: #756257;
-  --element-decore-2: rgba(117, 97, 87, 0.3);
-  --element-decore-3: #68a2ca;
+  --line-color: #756257;
+  --line-active-color: rgba(117, 97, 87, 0.3);
+  --line-color-light: #68a2ca;
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -46,7 +40,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -57,20 +51,30 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: var(--text-text-basic);
-  background-color: var(--backgroundd-basic-0);
+  color: var(--text-color-basic-text);
+  background-color: var(--page-background-color-darker);
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+
+  overflow: hidden;
 }
 
 /* Pages */
 
 /* Header */
-.page-header,
-.advantages,
-.service,
-.search,
-.main-footer {
-  background-color: var(--background-basic-1);
-}
 
 .page-header a,
 .main-footer a,
@@ -81,16 +85,23 @@ body {
 
 .navigation__link,
 .navigation__link-icon {
-  color: inherit;
+  color: var(--text-color-headers);
   background-color: inherit;
   text-align: center;
   font-size: 20px;
   line-height: inherit;
   font-family: inherit;
+  font-weight: 700;
 }
 
 .navigation__link--current {
-  border-bottom: 2px solid var(--element-decore-1);
+  border-bottom: 2px solid var(--line-color);
+}
+
+.navigation__item-number {
+  font-size: 10px;
+  color: var(--text-color-on-dark-background);
+  background-color: var(--button-favorite-background);
 }
 
 .button {
@@ -101,45 +112,45 @@ body {
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .button--color-1,
 .button--color-1:active {
-  background-color: var(--button-basic);
+  background-color: var(--button-background);
 }
 
 .button--color-1:hover,
 .button--color-1:focus-visible{
-  background-color: var(--button-basic-hover);
+  background-color: var(--button-background-hover);
 }
 
 .button:active {
-  color: var(--text-text-active-button);
+  color: var(--text-button-active);
 }
 
 .button--color-2,
 .button--color-2:active {
-  background-color: var(--button-second);
+  background-color: var(--button-form-background);
 }
 
 .button--color-2:hover,
 .button--color-2:focus-visible {
-  background-color: var(--button-second-hover);
+  background-color: var(--button-form-background-hover);
 }
 
 .button--color-3,
 .button--color-3:active {
-  background-color: var(--button-select);
+  background-color: var(--button-favorite-background);
 }
 
 .button--color-3:hover,
 .button--color-3:active {
-  background-color: var(--button-select-hover);
+  background-color: var(--button-favorite-background-hover);
 }
 
 .button:disabled {
-  background-color: var(--button-disabled);
+  background-color: var(--button-disabled-color);
 }
 
 .button--color-4,
@@ -151,7 +162,7 @@ body {
 }
 
 .button--color-4:disabled {
-  color: var(--text-text-filter-2);
+  color: var(--text-button-reset);
 }
 
 .button--color-4:hover,
@@ -160,13 +171,13 @@ body {
 }
 
 .button--color-4:focus-visible {
-  outline: 2px  solid  var(--element-decore-3);
+  outline: 2px  solid  var(--line-color-light);
 }
 
 /* Promo */
 
 .promo {
-  background-color: var(--background-basic-2);
+  background-color: #344B51;
   background-image: url("../images/backgrounds/divider-background.png"), url("../images/backgrounds/index-background.jpg");
 
   background-repeat: no-repeat;
@@ -181,7 +192,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-text-basic);
+  color: var(--text-color-headers);
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -189,7 +200,7 @@ body {
 
 .subtitle {
   font-family: "PT Sans", sans-serif;
-  color: var(--text-text-basic);
+  color: inherit;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -198,6 +209,8 @@ body {
 .title--small {
   font-size: 24px;
   line-height: 28px;
+  text-transform: unset;
+
 }
 
 .subtitle--small {
@@ -205,35 +218,40 @@ body {
   line-height: 21px;
 }
 
+.card__title,
+.card__info .subtitle {
+  text-align: left;
+}
+
 .advantages__item:nth-child(4n+1) {
-  background-color: var(--background-basic-2);
+  background-color: var(--background-advantages-color-dark);
 }
 
 .advantages__item:nth-child(4n+1) > .advantages__title,
 .advantages__item:nth-child(4n+1) > .advantages__subtitle {
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .advantages__item:nth-child(2n) {
-  background-color: var(--background-second-2);
+  background-color: var(--background-service-color);
 }
 
 .advantages__item:nth-child(4n+3) {
-  background-color: var(--background-second-1);
+  background-color: var(--background-service-color-light);
 }
 
 /* Service */
 
 .service__item:nth-child(2n+1) {
-  background-color: var(--background-second-1);
+  background-color: var(--background-service-color-light);
 }
 
 .service__item:nth-child(2n) {
-  background-color: var(--background-basic-1);
+  background-color: var(--page-background-color);
 }
 
 .subscribe {
-  background-color: var(--background-basic-2);
+  background-color: #344B51;
   background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -247,39 +265,43 @@ body {
 
 .subscribe__title,
 .subscribe__subtitle {
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .subscribe__input,
 .range__input {
-  background-color: var(--backgroundd-basic-0);
-  outline: 2px solid var(--element-decore-2);
+  background-color: var(--page-background-color-darker);
+  outline: 2px solid var(--line-active-color);
   outline-offset: -2px;
   border: none;
   border-radius: 4px;
-  color: var(--text-text-second);
+  color: var(--text-color-headers);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: "PT Sans", sans-serif;
 }
 
 .subscribe__input:hover,
 .subscribe__input:focus,
 .range__input:hover,
 .range__input:focus {
-  outline-color: var(--element-decore-3);
+  outline-color: var(--line-color-light);
 }
 
 .subscribe__input:active,
 .range__input:active {
-  color: var(--element-decore-2);
+  color: var(--line-active-color);
 }
 
 .subscribe__input::placeholder,
 .range__input::placeholder {
-  color: var(--element-decore-2);
+  color: var(--line-active-color);
 }
 
 .button--color-2 {
-  background-color: var(--button-second);
-  color: var(--text-text-on-background);
+  background-color: var(--button-form-background);
+  color: var(--text-color-on-dark-background);
 }
 
 /* Footer */
@@ -290,14 +312,14 @@ body {
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  color: var(--text-text-basic);
+  color: var(--text-color-headers);
 }
 
 
 /* CATALOG*/
 
 .main-inner__header-container {
-  background-color: var(--background-basic-2);
+  background-color: #344B51;
   background-image: url("../images/backgrounds/catalog-filter-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -309,11 +331,11 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .breadcrumbs__link {
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 /* Filters */
@@ -328,7 +350,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-align: left;
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .label {
@@ -336,13 +358,14 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 
 }
 
 .range__label {
+  font-size: 18px;
   line-height:  24px;
-  color: var(--text-text-filter-1);
+  color: var(--text-label-color);
 }
 
 /* VIEW  SETTINGS */
@@ -352,49 +375,49 @@ body {
 }
 
 .main-inner__view-settings {
-  background-color: var(--background-basic-1);
+  background-color: var(--page-background-color);
 }
 
 .view-settings__sorting {
-  background-color: var(--background-basic-1);
-  border: 1px solid var(--form-disabled);
+  background-color: var(--page-background-color);
+  border: 1px solid var(--form-color-disabled);
   font-size: 18px;
   line-height: 21px;
   font-family: inherit;
 }
 
 .view-settings__sorting-option {
-  color: var(--text-text-second);
+  color: var(--text-color-basic-text);
   font-size: 18px;
   line-height: 21px;
   font-family: inherit;
 }
 
 .view-settings__view-type-item {
-  border: 2px solid var(--form-disabled);
+  border: 2px solid var(--form-color-disabled);
 }
 
 .view-settings__view-type-item:has(.view-settings__view-type-link--active) {
-  border-color: var(--icnos-basic);
+  border-color: var(--icons-color-dark);
 }
 
 /* Product card */
 
 .product-card {
-  background-color: var(--background-basic-1);
+  background-color: var(--page-background-color);
 }
 
 .card__info > dd {
-  color: var(--text-text-second);
+  color: var(--text-color-basic-text);
 }
 
 .card__rating-text {
-  background-color: var(--backgroundd-basic-0);
+  background-color: var(--page-background-color-darker);
 }
 
 .card__rating-text,
 .card__rating-value {
-  color: var(--text-text-second);
+  color: var(--text-color-basic-text);
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
@@ -406,24 +429,24 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: var(--text-text-on-background);
+  color: var(--text-color-on-dark-background);
 }
 
 .pagination__link--current,
 .pagination__button {
-  color: var(--text-text-basic);
+  color: var(--text-color-headers);
 }
 
 .pagination__item {
-  background-color: var(--background-basic-2);
+  background-color: var(--background-advantages-color-dark);
 }
 
 .pagination__item:has( > .pagination__link--current) {
-  background-color: var(--form-elements);
+  background-color: var(--pagination-color-current);
 }
 
 .pagination__item:has( > .pagination__button) {
-  background-color: var(--background-basic-1);
+  background-color: var(--page-background-color);
 }
 
 .pagination__button {
@@ -432,11 +455,11 @@ body {
 }
 
 .main-inner .subscribe {
-  background-color: var(--background-basic-1);
+  background-color: var(--page-background-color);
   background-image: unset;
 }
 
 .main-inner .subscribe__title,
 .main-inner .subscribe__subtitle {
-  color: var(--text-text-basic);
+  color: var(--text-color-headers);
 }
