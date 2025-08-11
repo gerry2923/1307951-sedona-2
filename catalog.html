@@ -27,22 +27,22 @@
               <a class="navigation__link navigation__link--current" aria-current="page">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation__list-icon">
-            <li class="navigation__item-icon">
-              <a href="#" class="navigation__link-icon">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation__item-icon">
-              <a href="#" class="navigation__link-icon">
-                <span class="visually-hidden">Избранное</span>
-                <span class="navigation__item-number">12</span>
-              </a>
-            </li>
-          </ul>
-          <button class="button button--color-1" type="button">Хочу сюда!
-            <span class="visually-hidden">Забронировать</span>
-          </button>
+        <ul class="navigation__list-icon">
+          <li class="navigation__item-icon">
+            <a href="#" class="navigation__link-icon navigation__link-icon--search">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation__item-icon">
+            <a href="#" class="navigation__link-icon navigation__link-icon--favourites">
+              <span class="visually-hidden">Избранное</span>
+              <span class="navigation__item-number">12</span>
+            </a>
+          </li>
+        </ul>
+        <button class="button button--color-1" type="button">Хочу сюда!
+          <span class="visually-hidden">Забронировать</span>
+        </button>
         </nav>
       </header>
 
@@ -170,14 +170,17 @@
 
         <section class="main-inner__view-settings view-settings">
           <h2 class="visually-hidden">Настройки отображения страницы каталога</h2>
-          <p class="view-settings__title title">Найдено гостиниц: <span class="title">38</span></p>
 
-          <div class="view-settings__filter-itme-container">
+          <p class="view-settings__title title">Найдено гостиниц:&nbsp;<span class="title">38</span></p>
+
+          <div class="view-settings__filter-item-container">
+
             <select class="view-settings__sorting" aria-label="Сортировка">
               <option class="view-settings__sorting-option" value="cheap">Сначала дешевые</option>
               <option class="view-settings__sorting-option" value="expensive">Сначала дорогие</option>
               <option class="view-settings__sorting-option" value="popular">Сначала популярные</option>
             </select>
+
             <ul class="view-settings__view-type-list">
               <li class="view-settings__view-type-item">
                 <a class="view-settings__view-type-link view-settings__view-type-link--active" href="#">
@@ -201,6 +204,7 @@
 
         <section class="product-card">
           <h2 class="visually-hidden">Карточки товаров</h2>
+
           <ul class="product-card__list">
             <li class="product-card__item card">
               <a class="card__header-link" href="#"> <!--tabindex="-1"-->
@@ -217,15 +221,16 @@
               </dl>
               <div class="card__controls">
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="button button--color-3" type="button">в избранное</button>
+                <button class="card__favourite button button--color-3" type="button">в избранное</button>
               </div>
               <div class="card__rating">
                 <p class="card__rating-stars card__rating-stars--4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
                 </p>
-                <p class="card__rating-text">Рейтинг:<span class="card__rating-value">9,2</span></p>
+                <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">9,2</span></p>
               </div>
             </li>
+
             <li class="product-card__item card">
               <a class="card__header-link" href="#">
                 <img class="card__picture" src="images/content/hotel-2.jpg" width="300" height="212"
@@ -242,14 +247,15 @@
               </dl>
               <div class="card__controls">
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="button button--color-3" type="button">в избранное</button>
+                <button class="card__favourite button button--color-3" type="button">в избранное</button>
               </div>
               <div class="card__rating">
                 <p class="card__rating-stars card__rating-stars--4"><span class="visually-hidden">Четырехзвездочный
                     отель</span></p>
-                <p class="card__rating-text">Рейтинг:<span class="card__rating-value">9,2</span></p>
+                <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">9,2</span></p>
               </div>
             </li>
+
             <li class="product-card__item card">
               <a class="card__header-link" href="#">
                 <img class="card__picture" src="images/content/hotel-3.jpg" width="300" height="212"
@@ -266,15 +272,16 @@
               </dl>
               <div class="card__controls">
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="button button--color-3" type="button">в избранное</button>
+                <button class="card__favourite button button--color-3" type="button">в избранное</button>
               </div>
               <div class="card__rating">
                 <p class="card__rating-stars card__rating-stars--3">
                   <span class="visually-hidden">Трехзвездочный отель</span>
                 </p>
-                <p class="card__rating-text">Рейтинг:<span class="card__rating-value">6,9</span></p>
+                <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">6,9</span></p>
               </div>
             </li>
+
             <li class="product-card__item card">
               <a class="card__header-link" href="#">
                 <img class="card__picture" src="images/content/hotel-4.jpg" width="300" height="212"
@@ -291,16 +298,17 @@
               </dl>
               <div class="card__controls">
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="button button--color-3" type="button">в избранное</button>
+                <button class="card__favourite button button--color-3" type="button">в избранное</button>
               </div>
               <div class="card__rating">
                 <p class="card__rating-stars card__rating-stars--2">
                   <span class="visually-hidden">Двухзвездочный отель</span>
                 </p>
-                <p class="card__rating-text">Рейтинг:<span class="card__rating-value">5,0</span></p>
+                <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">5,0</span></p>
               </div>
             </li>
           </ul>
+
           <ol class="product-card__pagination pagination">
             <li class="pagination__item">
               <a class="pagination__link pagination__link--current" href="#" aria-current="page">
@@ -319,7 +327,7 @@
                 <span class="visually-hidden">Номер страницы</span>4</a>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button" type="button">
+              <button class="pagination__link pagination__button" type="button">
                 <span class="visually-hidden">Номер страницы</span>&hellip;</button>
             </li>
             <li class="pagination__item">
@@ -328,15 +336,19 @@
             </li>
           </ol>
         </section>
+
         <section class="subscribe">
           <h2 class="subscribe__title title">Подпишитесь на рассылку новостей</h2>
           <p class="subscribe__subtitle subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form action="https://echo.htmlacademy.ru">
-            <label>
-              <input class="subscribe__input" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
-            </label>
-            <button class="button button--color-2 button--big" type="submit">Подписаться</button>
-          </form>
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru">
+
+          <label>
+            <input class="subscribe__input" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+          </label>
+
+          <button class="button button--color-2 button--big" type="submit">Подписаться</button>
+
+        </form>
         </section>
       </main>
       <footer class="main-footer">
