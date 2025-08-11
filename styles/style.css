@@ -126,6 +126,7 @@ body {
   color: var(--text-color-on-dark-background);
 
   border-radius: 4px;
+  padding: 8px 10px;
 }
 
 .button--color-1,
@@ -355,12 +356,17 @@ body {
   font-size: 60px;
   line-height: 78px;
   color: var(--text-color-on-dark-background);
+
+  margin: 0 0 8px 0;
+
 }
 
 .breadcrumbs__list {
   list-style-type: none;
   display: flex;
-
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs__item:first-child {
@@ -624,7 +630,7 @@ body {
 
   list-style: none;
   padding-left: 0;
-
+  margin: 0;
 }
 
 .advantages__item {
@@ -776,4 +782,142 @@ body {
 
 .socials__item {
   padding-top: 8px;
+}
+
+.main-inner__breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.filters__form {
+  display: flex;
+  column-gap: 70px;
+  justify-content: space-between;
+}
+
+.filters__column {
+  column-gap: 70px;
+}
+
+.filters__column--left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+
+}
+
+.filters__group {
+  margin: 0;
+  padding: 0;
+  min-width: 150px;
+}
+
+.filters__title {
+  margin-bottom: 32px;
+}
+
+.infrastructure,
+.house-type {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__list > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.filters__column--right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.range__inputs {
+  display: flex;
+  margin: 0;
+}
+
+.range__input-wrapper {
+  position: relative;
+}
+
+.range__input-wrapper:first-child {
+  margin-right: 2px;
+  margin-bottom: 36px;
+}
+
+.range__input {
+  box-sizing: border-box;
+  outline-color: transparent;
+  min-width: 143px;
+  margin: 0;
+  padding: 12px 20px;
+}
+
+.range__input-wrapper:first-child > .range__input {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.range__input-wrapper:last-child > .range__input {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.range__label {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__button {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.slider__progress {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--form-color-disabled);
+  position: absolute;
+  top: 9px;
+}
+
+.filters__button {
+  display: block;
+  min-width: 191px;
+}
+
+.filters__buttons-container {
+  padding-top: 56px;
+}
+
+.filters__button:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+/* найдено страниц */
+
+.main-inner__view-settings {
+  background-color: pink;
+
+}
+
+.view-settings {
+  padding: 56px 70px 46px;
+  display: flex;
+
+}
+
+.view-settings__filter-itme-container {
+  display: flex;
+  column-gap: 70px;
+  row-gap: 30px;
 }
