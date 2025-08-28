@@ -81,18 +81,21 @@
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
                         <input class="infrastructure__option" type="checkbox" name="swiming-pool" value="on" checked>
+                        <span class="infrastructure__checkbox"></span>
                         Бассейн
                       </label>
                     </li>
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
                         <input class="infrastructure__option" type="checkbox" name="parking" value="on" checked>
+                        <span class="infrastructure__checkbox"></span>
                         Парковка
                       </label>
                     </li>
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
                         <input class="infrastructure__option" type="checkbox" name="wifi" value="off">
+                        <span class="infrastructure__checkbox"></span>
                         Wi-Fi
                       </label>
                     </li>
@@ -104,30 +107,30 @@
                   <legend class="filters__title">Тип Жилья:</legend>
 
                   <ol class="filters__list house-type">
-
                     <li class="house-type__item">
                       <label class="house-type__label filters-label">
-                        <input class="house-type__option" type="radio" name="house-type" value="hotel" checked/>
+                        <input class="house-type__option" type="radio" name="house-type" value="hotel" checked />
+                        <span class="house-type__radio"></span>
                         Гостиницы
                       </label>
                     </li>
 
                     <li class="house-type__item">
                       <label class="house-type__label filters-label">
-                        <input class="house-type__option" type="radio" name="house-type" value="Motel"/>
+                        <input class="house-type__option" type="radio" name="house-type" value="Motel" />
+                        <span class="house-type__radio"></span>
                         Мотель
                       </label>
                     </li>
 
                     <li class="house-type__item">
                       <label class="house-type__label filters-label">
-                        <input class="house-type__option" type="radio" name="house-type" value="Apartments"/>
+                        <input class="house-type__option" type="radio" name="house-type" value="Apartments" />
+                        <span class="house-type__radio"></span>
                         Апартаменты
                       </label>
                     </li>
-
                   </ol>
-
                 </fieldset>
               </div>
 
@@ -156,19 +159,18 @@
                     </div>
 
                     <div class="range__slider slider">
-                      <button class="slider__button" type="button">
+                      <span class="slider__progress" style="width: 216px; height: 4px;"></span>
+
+                      <button class="slider__toggle slider__toggle--toggle-min" type="number">
                         <span class="visually-hidden">Минимальная цена товара</span>
                       </button>
 
-                      <span class="slider__progress"></span>
-
-                      <button class="slider__button" type="button">
+                      <button class="slider__toggle slider__toggle--toggle-max" type="number">
                         <span class="visually-hidden">Максимальная цена товара</span>
                       </button>
                     </div>
 
                   </div>
-
                 </fieldset>
 
                 <div class="filters__buttons-container">
@@ -182,177 +184,181 @@
           </section>
         </div>
 
-        <section class="main-inner__view-settings view-settings">
-          <h2 class="visually-hidden">Настройки отображения страницы каталога</h2>
+        <section class="main-inner__basic-content">
+          <div class="view-settings">
+            <h2 class="visually-hidden">Настройки отображения страницы каталога</h2>
 
-          <p class="view-settings__title title">Найдено гостиниц:&nbsp;<span class="title">38</span></p>
+            <p class="view-settings__title title title--uppercase">Найдено гостиниц:&nbsp;<span class="title">38</span></p>
 
-          <div class="view-settings__filter-item-container">
-            <select class="view-settings__sorting" aria-label="Сортировка">
-              <option class="view-settings__sorting-option" value="cheap">Сначала дешевые</option>
-              <option class="view-settings__sorting-option" value="expensive">Сначала дорогие</option>
-              <option class="view-settings__sorting-option" value="popular">Сначала популярные</option>
-            </select>
+            <div class="view-settings__filter-item-container">
+              <select class="view-settings__sorting" aria-label="Сортировка">
+                <option class="view-settings__sorting-option" value="cheap">Сначала дешевые</option>
+                <option class="view-settings__sorting-option" value="expensive">Сначала дорогие</option>
+                <option class="view-settings__sorting-option" value="popular">Сначала популярные</option>
+              </select>
 
+              <ul class="view-settings__view-type-list">
 
-            <ul class="view-settings__view-type-list">
-              <li class="view-settings__view-type-item">
-                <a class="view-settings__view-type-link view-settings__view-type-link--plate view-settings__view-type-link--active" href="#">
-                  <span class="visually-hidden">Показать плитку</span>
-                </a>
-              </li>
-              <li class="view-settings__view-type-item">
-                <a class="view-settings__view-type-link view-settings__view-type-link--card" href="#">
-                  <span class="visually-hidden">Показать карточки</span>
-                </a>
-              </li>
-              <li class="view-settings__view-type-item">
-                <a class="view-settings__view-type-link view-settings__view-type-link--list" href="#">
-                  <span class="visually-hidden">Показать список</span>
-                </a>
-              </li>
-            </ul>
+                <li class="view-settings__view-type-item">
+                  <a class="view-settings__view-type-link view-settings__view-type-link--plate view-settings__view-type-link--active"
+                    href="#">
+                    <span class="visually-hidden">Показать плитку</span>
+                  </a>
+                </li>
+
+                <li class="view-settings__view-type-item">
+                  <a class="view-settings__view-type-link view-settings__view-type-link--card" href="#">
+                    <span class="visually-hidden">Показать карточки</span>
+                  </a>
+                </li>
+
+                <li class="view-settings__view-type-item">
+                  <a class="view-settings__view-type-link view-settings__view-type-link--list" href="#">
+                    <span class="visually-hidden">Показать список</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
           </div>
 
-        </section>
+          <div class="product-card">
+            <h2 class="visually-hidden">Карточки товаров</h2>
 
-        <section class="product-card">
-          <h2 class="visually-hidden">Карточки товаров</h2>
+            <ul class="product-card__list">
+              <li class="product-card__item card">
+                <a class="card__header-link" href="#"> <!--tabindex="-1"-->
+                  <img class="card__picture" src="images/content/hotel-1.jpg" width="300" height="212" alt="Ущелье ночью">
+                </a>
 
-          <ul class="product-card__list">
-            <li class="product-card__item card">
-              <a class="card__header-link" href="#"> <!--tabindex="-1"-->
-                <img class="card__picture" src="images/content/hotel-1.jpg" width="300" height="212" alt="Ущелье ночью">
-              </a>
+                <a class="card__header-link" href="#">
+                  <h3 class="card__title title title--small">Amara Resort & Spa</h3>
+                </a>
 
-              <a class="card__header-link" href="#">
-                <h3 class="card__title title title--small">Amara Resort & Spa</h3>
-              </a>
+                <dl class="card__info">
+                  <dt class="visually-hidden">Тип жилья</dt>
+                  <dd class="subtitle subtitle--small">Гостиница</dd>
+                  <dt class="visually-hidden">Цена</dt>
+                  <dd class="subtitle subtitle--small">От 4000 &#8381;</dd>
+                </dl>
 
-              <dl class="card__info">
-                <dt class="visually-hidden">Тип жилья</dt>
-                <dd class="subtitle subtitle--small">Гостиница</dd>
-                <dt class="visually-hidden">Цена</dt>
-                <dd class="subtitle subtitle--small">От 4000 &#8381;</dd>
-              </dl>
-
-              <!-- <div class="card__controls"> -->
+                <!-- <div class="card__controls"> -->
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="card__favourite button button--color-3" type="button">в избранное</button>
-              <!-- </div> -->
-              <!-- <div class="card__rating"> -->
+                <button class="card__favourite button button--color-2" type="button">в избранное</button>
+                <!-- </div> -->
+                <!-- <div class="card__rating"> -->
                 <p class="card__rating-stars card__rating-stars--4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
                 </p>
                 <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">9,2</span></p>
-              <!-- </div> -->
-            </li>
+                <!-- </div> -->
+              </li>
 
-            <li class="product-card__item card">
-              <a class="card__header-link" href="#">
-                <img class="card__picture" src="images/content/hotel-2.jpg" width="300" height="212"
-                  alt="Горы на фоне радуги">
-              </a>
-              <a class="card__header-link" href="#">
-                <h3 class="card__title title title--small">Villas at Poco Diablo</h3>
-              </a>
-              <dl class="card__info">
-                <dt class="visually-hidden">Тип жилья</dt>
-                <dd class="subtitle subtitle--small">Гостиница</dd>
-                <dt class="visually-hidden">Цена</dt>
-                <dd class="subtitle subtitle--small">От 5000 &#8381;</dd>
-              </dl>
-              <!-- <div class="card__controls"> -->
+              <li class="product-card__item card">
+                <a class="card__header-link" href="#">
+                  <img class="card__picture" src="images/content/hotel-2.jpg" width="300" height="212"
+                    alt="Горы на фоне радуги">
+                </a>
+                <a class="card__header-link" href="#">
+                  <h3 class="card__title title title--small">Villas at Poco Diablo</h3>
+                </a>
+                <dl class="card__info">
+                  <dt class="visually-hidden">Тип жилья</dt>
+                  <dd class="subtitle subtitle--small">Гостиница</dd>
+                  <dt class="visually-hidden">Цена</dt>
+                  <dd class="subtitle subtitle--small">От 5000 &#8381;</dd>
+                </dl>
+                <!-- <div class="card__controls"> -->
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="card__favourite button button--color-3" type="button">в избранное</button>
-              <!-- </div> -->
-              <!-- <div class="card__rating"> -->
+                <button class="card__favourite button button--color-3" type="button">в избранном</button>
+                <!-- </div> -->
+                <!-- <div class="card__rating"> -->
                 <p class="card__rating-stars card__rating-stars--4"><span class="visually-hidden">Четырехзвездочный
                     отель</span></p>
                 <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">9,2</span></p>
-              <!-- </div> -->
-            </li>
+                <!-- </div> -->
+              </li>
 
-            <li class="product-card__item card">
-              <a class="card__header-link" href="#">
-                <img class="card__picture" src="images/content/hotel-3.jpg" width="300" height="212"
-                  alt="Горный рассвет">
-              </a>
-              <a class="card__header-link" href="#">
-                <h3 class="card__title title title--small">Desert Quail Inn</h3>
-              </a>
-              <dl class="card__info">
-                <dt class="visually-hidden">Тип жилья</dt>
-                <dd class="subtitle subtitle--small">Гостиница</dd>
-                <dt class="visually-hidden">Цена</dt>
-                <dd class="subtitle subtitle--small">От 2500 &#8381;</dd>
-              </dl>
-              <!-- <div class="card__controls"> -->
+              <li class="product-card__item card">
+                <a class="card__header-link" href="#">
+                  <img class="card__picture" src="images/content/hotel-3.jpg" width="300" height="212" alt="Горный рассвет">
+                </a>
+                <a class="card__header-link" href="#">
+                  <h3 class="card__title title title--small">Desert Quail Inn</h3>
+                </a>
+                <dl class="card__info">
+                  <dt class="visually-hidden">Тип жилья</dt>
+                  <dd class="subtitle subtitle--small">Гостиница</dd>
+                  <dt class="visually-hidden">Цена</dt>
+                  <dd class="subtitle subtitle--small">От 2500 &#8381;</dd>
+                </dl>
+                <!-- <div class="card__controls"> -->
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="card__favourite button button--color-3" type="button">в избранное</button>
-              <!-- </div> -->
-              <!-- <div class="card__rating"> -->
+                <button class="card__favourite button button--color-2" type="button">в избранное</button>
+                <!-- </div> -->
+                <!-- <div class="card__rating"> -->
                 <p class="card__rating-stars card__rating-stars--3">
                   <span class="visually-hidden">Трехзвездочный отель</span>
                 </p>
                 <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">6,9</span></p>
-              <!-- </div> -->
-            </li>
+                <!-- </div> -->
+              </li>
 
-            <li class="product-card__item card">
-              <a class="card__header-link" href="#">
-                <img class="card__picture" src="images/content/hotel-4.jpg" width="300" height="212"
-                  alt="Каньон на фоне ночного неба">
-              </a>
-              <a class="card__header-link" href="#">
-                <h3 class="card__title title title--small">GreenTree Inn</h3>
-              </a>
-              <dl class="card__info">
-                <dt class="visually-hidden">Тип жилья</dt>
-                <dd class="subtitle subtitle--small">Гостиница</dd>
-                <dt class="visually-hidden">Цена</dt>
-                <dd class="subtitle subtitle--small">От 1500 &#8381;</dd>
-              </dl>
-              <!-- <div class="card__controls"> -->
+              <li class="product-card__item card">
+                <a class="card__header-link" href="#">
+                  <img class="card__picture" src="images/content/hotel-4.jpg" width="300" height="212"
+                    alt="Каньон на фоне ночного неба">
+                </a>
+                <a class="card__header-link" href="#">
+                  <h3 class="card__title title title--small">GreenTree Inn</h3>
+                </a>
+                <dl class="card__info">
+                  <dt class="visually-hidden">Тип жилья</dt>
+                  <dd class="subtitle subtitle--small">Гостиница</dd>
+                  <dt class="visually-hidden">Цена</dt>
+                  <dd class="subtitle subtitle--small">От 1500 &#8381;</dd>
+                </dl>
+                <!-- <div class="card__controls"> -->
                 <a class="card__link button button--color-1" href="#">подробнее</a>
-                <button class="card__favourite button button--color-3" type="button">в избранное</button>
-              <!-- </div> -->
-              <!-- <div class="card__rating"> -->
+                <button class="card__favourite button button--color-2" type="button">в избранное</button>
+                <!-- </div> -->
+                <!-- <div class="card__rating"> -->
                 <p class="card__rating-stars card__rating-stars--2">
                   <span class="visually-hidden">Двухзвездочный отель</span>
                 </p>
                 <p class="card__rating-text">Рейтинг:&nbsp;<span class="card__rating-value">5,0</span></p>
-              <!-- </div> -->
-            </li>
-          </ul>
+                <!-- </div> -->
+              </li>
+            </ul>
 
-          <ol class="product-card__pagination pagination">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--current" href="#" aria-current="page">
-                <span class="visually-hidden">Номер страницы</span>1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <span class="visually-hidden">Номер страницы</span>2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <span class="visually-hidden">Номер страницы</span>3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <span class="visually-hidden">Номер страницы</span>4</a>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link pagination__button" type="button">
-                <span class="visually-hidden">Номер страницы</span>&hellip;</button>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">
-                <span class="visually-hidden">Номер страницы</span>10</a>
-            </li>
+            <ol class="product-card__pagination pagination">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--current" href="#" aria-current="page">
+                  <span class="visually-hidden">Номер страницы</span>1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Номер страницы</span>2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Номер страницы</span>3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Номер страницы</span>4</a>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__link pagination__button" type="button">
+                  <span class="visually-hidden">Номер страницы</span>&hellip;</button>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Номер страницы</span>10</a>
+              </li>
 
-          </ol>
+            </ol>
+          </div>
         </section>
 
         <section class="subscribe">
@@ -417,6 +423,7 @@
         </a>
       </footer>
     </div>
+
   </body>
 
 </html>
