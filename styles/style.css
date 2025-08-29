@@ -51,10 +51,10 @@
   font-display: swap;
 }
 
-/* * {
+* {
   outline: 1px dotted goldenrod;
   outline-offset: -1px;
-} */
+}
 
 *,
 *::before,
@@ -1471,6 +1471,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal--hide {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -1523,53 +1527,52 @@ body {
   margin-bottom: 64px;
 }
 
-.modal__form {
+/*---------grid start-------------*/
+
+.form {
   display: grid;
-  grid-template-columns: 137px 111px 88px auto 110px;
+  grid-template-columns: 138px 110px 88px auto 110px;
   row-gap: 48px;
 }
 
-.modal__check-in-label{
+.label__check-in {
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
-.modal__input-container:has(> .modal__check-in-input) {
+.form__input-container:has(>.input__check-in) {
   grid-column: 2/span 4;
   grid-row: 1/2;
 }
 
-.modal__check-out-label {
+.label__check-out {
   grid-column: 1/2;
   grid-row: 2/3;
 }
 
-.modal__input-container:has(> .modal__check-out-input) {
+.form__input-container:has(>.input__check-out) {
   grid-column: 2/span 4;
   grid-row: 2/3;
 }
 
-.modal__adults-number-label {
+.label__adults {
   grid-column: 1/2;
   grid-row: 3/4;
 }
 
-.modal__input-container:has(.modal__adults-number-input) {
+.form__input-container:has(>.input__adults) {
   grid-column: 2/3;
-  grid-row: 3/4;
-
-  position: relative;
+  grid-row:3/4;
 }
 
-.modal__childern-number-label {
+.label__children {
   grid-column: 4/5;
   grid-row: 3/4;
 }
 
-.modal__input-container:has(>.modal__childern-number-input) {
+.form__input-container:has(>.input__children) {
   grid-column: 5/6;
-  grid-row: 3/4;
-  position: relative;
+  grid-row:3/4;
 }
 
 .modal__search-button {
@@ -1577,71 +1580,101 @@ body {
   grid-row: 4/5;
 }
 
-.modal__label,
-.modal__input {
-  font-family: "PT Sans", sans-serif;
-  font-weight: bold;
+/*---------grid end ---------------*/
+
+.label {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
   color: var(--text-color-headers);
-}
-
-.modal__label {
-  align-self: center;
   text-transform: capitalize;
 }
 
-.modal__input {
+.input__tooltip-info--hide {
+  display: none;
+}
+
+.form__label {
+  align-self: center;
+}
+
+.form__input {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 48px; /* или паддинг?*/
+  line-height: 24px;
+  font-weight: 700;
+  min-height: 48px;
+  padding-left: 19px;
+  padding-right: 55px;
   background-color: var(--page-background-color-darker);
-  border: unset;
+  border: none;
   border-radius: 4px;
 }
 
-.modal__input-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
+.input__message {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--text-color-basic-text);
 }
 
-.input-icon__calendar {
+.input__message--error {
+  color: var(--text-error);
+}
+
+.input__tooltip-info {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-on-dark-background);
+  background-color: var(--text-color-basic-text);
+  padding: 15px 18px 18px 22px;
+
+}
+
+.form__input-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input__message {
+  position: absolute;
+  bottom: -25px;
+  left: 19px;
+}
+
+.input__icon {
   position: absolute;
   top: 13px;
   right: 20px;
 }
 
-.modal__search-button {
-  padding: 18px 20px;
-  line-height: 24px;
-  font-size: 20px;
-  border-radius: 10px;
+.input__button {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
 }
 
-.modal__input[type="number"] {
+.input__button--minus {
+  left: 0;
+}
+
+.input__button--plus {
+  right: 0;
+}
+
+.form__input[type="number"] {
   appearance: none;
   -moz-appearance: textfield;
   text-align: center;
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.modal__input[type="number"]::-webkit-inner-spin-button,
-.modal__input[type="number"]::-webkit-outer-spin-button {
+.form__input[type="number"]::-webkit-inner-spin-button,
+.form__input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none; margin: 0;
-}
-
-.modal__input-button {
-
-  position: absolute;
-  top: 0;
-}
-
-.modal__input-button--minus {
-  left: 0;
-}
-
-.modal__input-button--plus {
-  right: 0;
 }

@@ -68,7 +68,8 @@
 
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества поездки в Седону</h2>
-          <p class="advantages__title title title--uppercase">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="advantages__title title title--uppercase">Седона — небольшой городок в Аризоне, заслуживающий
+            большего!</p>
           <p class="advantages__subtitle subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
           <ul class="advantages__list">
@@ -223,7 +224,7 @@
       </footer>
     </div>
 
-    <div class="modal__container">
+    <div class="modal__container ">
       <div class="modal modal__search-hotel">
 
         <button class="modal__close-button" type="button">
@@ -233,15 +234,15 @@
         <section class="modal__content">
           <h2 class="modal__title title title--uppercase">Поиск гостиницы в Седоне</h2>
 
-          <form class="modal__form" action="https://echo.htmlacademy.ru">
+          <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
 
-            <label class="modal__label modal__check-in-label" for="check-in-date">Дата заезда:</label>
-
-            <div class="modal__input-container">
-              <input class="modal__input modal__check-in-input" type="text" id="check-in-date" value="27 апреля 2020"
-                minlength="4" maxlength="25" required>
-
-              <svg class="input-icon input-icon__calendar" width="20" height="21" viewBox="0 0 20 21" fill="none"
+            <label class="form__label label label__check-in" for="check-in">Дата заезда:</label>
+            <p class="form__input-container input">
+              <input class="form__input input__check-in" type="text" id="check-in" name="check-in"
+                value="27 апреля 2020" placeholder="27 апреля 2020">
+              <span class="visually-hidden">Введите дату заезда в гостиницу</span>
+              <span class="input__message input__message--error">Мы не можем отправить вас в прошлое</span>
+              <svg class="input__icon input__icon--calendar" width="20" height="21" viewBox="0 0 20 21" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.3">
                   <path
@@ -279,15 +280,15 @@
                     fill="black" />
                 </g>
               </svg>
-            </div>
+            </p>
 
-            <label class="modal__label modal__check-out-label" for="check-out-date">Дата выезда:</label>
-
-            <div class="modal__input-container">
-              <input class="modal__input modal__check-out-input" type="text" id="check-out-date" value="1 сентября 2023"
-                minlength="4" maxlength="25" required>
-
-              <svg class="input-icon input-icon__calendar" width="20" height="21" viewBox="0 0 20 21" fill="none"
+            <label class="form__label label label__check-out" for="check-in">Дата выезда:</label>
+            <p class="form__input-container input">
+              <input class="form__input input__check-out" type="text" name="check-out" value="1 сентября 2023"
+                placeholder="1 сентября 2023">
+              <span class="visually-hidden">Введите дату выезда из гостиницы</span>
+              <span class="input__message input__message--info">На эти даты есть свободные номера. Пока есть.</span>
+              <svg class="input__icon input__icon--calendar" width="20" height="21" viewBox="0 0 20 21" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.3">
                   <path
@@ -325,30 +326,55 @@
                     fill="black" />
                 </g>
               </svg>
-            </div>
+            </p>
 
+            <label class="form__label label label__adults" for="input-adults">Взрослые:</label>
+            <p class="form__input-container input">
+              <button class="input__button input__button--minus" type="button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3" />
+                </svg>
+              </button>
+              <span class="visually-hidden">Удалить одного взрослого</span>
+              <input class="form__input input__adults" type="number" name="adults" value="2" placeholder="1">
+              <button class="input__button input__button--plus" type="button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3" />
+                </svg>
+              </button>
+              <span class="visually-hidden">Добавить одного взрослого</span>
+            </p>
 
-            <label class="modal__label modal__adults-number-label" for="adults">Взрослые:</label>
+            <label class="form__label label label__children" for="input-children">Дети:
+              <span class="input__tooltip tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg class="tooltip-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" role="tooltip">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
+                  </svg>
+                </button>
+              </span>
 
-
-            <div class="modal__input-container">
-              <input class="modal__input modal__adults-number-input" type="number" id="adults" value="2" required>
-              <button class="modal__input-button modal__input-button--minus" type="button"></button>
-              <button class="modal__input-button modal__input-button--plus" type="button"></button>
-            </div>
-
-            <label class="modal__label modal__childern-number-label" for="children">Дети:</label>
-
-
-            <div class="modal__input-container">
-              <input class="modal__input modal__childern-number-input" type="number" id="children" value="2" required>
-              <button class="modal__input-button modal__input-button--minus" type="button"></button>
-              <button class="modal__input-button modal__input-button--plus" type="button"></button>
-            </div>
-
+              <span class="input__tooltip-info input__tooltip-info--hide">Укажите количество детей, которые будут с
+                вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </label>
+            <p class="form__input-container input">
+              <button class="input__button input__button--minus" type="button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3" />
+                </svg>
+              </button>
+              <span class="visually-hidden">Удалить одного ребенка</span>
+              <input class="form__input input__children" name="adults" type="number" value="2" placeholder="1">
+              <button class="input__button input__button--plus" type="button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3" />
+                </svg>
+              </button>
+              <span class="visually-hidden">Добавить одного ребенка</span>
+            </p>
 
             <button class="modal__search-button button button--color-2" type="submit">Найти</button>
-
 
           </form>
         </section>
