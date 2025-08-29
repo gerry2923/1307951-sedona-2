@@ -51,10 +51,10 @@
   font-display: swap;
 }
 
-* {
+/* * {
   outline: 1px dotted goldenrod;
   outline-offset: -1px;
-}
+} */
 
 *,
 *::before,
@@ -1590,10 +1590,6 @@ body {
   text-transform: capitalize;
 }
 
-.input__tooltip-info--hide {
-  display: none;
-}
-
 .form__label {
   align-self: center;
 }
@@ -1621,15 +1617,6 @@ body {
   color: var(--text-error);
 }
 
-.input__tooltip-info {
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--text-color-on-dark-background);
-  background-color: var(--text-color-basic-text);
-  padding: 15px 18px 18px 22px;
-
-}
-
 .form__input-container {
   position: relative;
   display: grid;
@@ -1655,6 +1642,9 @@ body {
   height: 100%;
   width: 40px;
   top: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .input__button--minus {
@@ -1677,4 +1667,63 @@ body {
 .form__input[type="number"]::-webkit-inner-spin-button,
 .form__input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none; margin: 0;
+}
+
+.modal__search-button {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tooltip {
+  margin-left: 5px;
+}
+
+.tooltip-toggle {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: var(--slider-focus-border-color);
+  padding: 0;
+  cursor: pointer;
+}
+
+.label__children {
+  position: relative;
+}
+
+.input__tooltip-info {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-on-dark-background);
+  background-color: var(--text-color-basic-text);
+  padding: 20px 18px 23px 22px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  top: 42px;
+  left: -57px;
+  min-width: 256px;
+  border-radius: 10px;
+  text-transform: none;
+  box-shadow: 0 15px 30px 0 var(--text-label-color);
+}
+
+.input__tooltip-info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: 118px;
+  width: 19px;
+  height: 9px;
+  background-color: var(--text-color-basic-text);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.input__tooltip-info--hide {
+  display: none;
 }
