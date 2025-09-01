@@ -1522,6 +1522,23 @@ body {
   transform: rotate(-45deg);
 }
 
+.modal__close-button:hover {
+  background-color: var(--button-disabled-color);
+}
+.modal__close-button:focus {
+  background-color: var(--button-disabled-color);
+  outline: 3px solid var(--slider-focus-border-color);
+}
+.modal__close-button:active {
+  background-color: var(--button-disabled-color);
+  outline: unset;
+}
+
+.modal__close-button:active::before,
+.modal__close-button:active::after {
+  opacity: 0.3;
+}
+
 .modal__title {
   margin-top: 0;
   margin-bottom: 64px;
@@ -1689,6 +1706,11 @@ body {
   background-color: var(--slider-focus-border-color);
   padding: 0;
   cursor: pointer;
+  vertical-align: middle;
+}
+
+.tooltip-toggle__icon {
+  margin-top: 2px;
 }
 
 .label__children {
@@ -1726,4 +1748,31 @@ body {
 
 .input__tooltip-info--hide {
   display: none;
+}
+
+.input__button > svg {
+  color:  rgba(117, 97, 87, 0.3);
+}
+
+.input__button:hover > svg {
+  color:  #000000;
+}
+
+.input__button:focus {
+  outline: unset;
+}
+
+.input__button:focus > svg {
+  color:  #000000;
+  outline: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.input__button:active {
+  opacity: 0.2;
+  outline: unset;
+}
+
+.input__button:active > svg {
+  color:  #000000;
 }
