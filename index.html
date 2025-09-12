@@ -249,7 +249,7 @@
 
     <!-- Для отображения модального окна нужно удалить класс modal--hide -->
 
-    <div class="modal__container">
+    <div class="modal__container modal--hide">
       <div class="modal modal__search-hotel">
 
         <button class="modal__close-button" type="button">
@@ -365,7 +365,8 @@
               </button>
               <span class="visually-hidden">Удалить одного взрослого</span>
 
-              <input class="form__input input__adults" type="number" name="adults-number" id="adults-number" value="2" placeholder="1">
+              <input class="form__input input__adults" type="number" name="adults-number" id="adults-number" value="2"
+                placeholder="1">
 
               <button class="input__button input__button--plus" type="button">
                 <svg class="input__button-icon--plus" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
@@ -381,14 +382,16 @@
             <label class="form__label label label__children" for="children-number">Дети:
               <span class="input__tooltip tooltip">
                 <button class="tooltip-toggle" type="button">
-                  <svg class="tooltip-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="tooltip">
+                  <svg class="tooltip-toggle__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" role="tooltip">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
                   </svg>
                 </button>
               </span>
 
               <!-- Чтобы убрать сообщение, нужно добавить класс  input__tooltip-info--hide -->
-              <span class="input__tooltip-info input__tooltip-info--hide">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              <span class="input__tooltip-info input__tooltip-info--hide">Укажите количество детей, которые будут с
+                вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </label>
 
             <p class="form__input-container input">
@@ -400,7 +403,7 @@
               </button>
               <span class="visually-hidden">Удалить одного ребенка</span>
               <input class="form__input input__children" name="children-number" id="children-number" type="number"
-                value="2" tabindex="-1" placeholder="1">
+                value="2" placeholder="1">
 
               <button class="input__button input__button--plus" type="button">
                 <svg class="input__button-icon--plus" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
