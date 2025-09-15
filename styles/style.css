@@ -116,78 +116,78 @@ html {
   cursor: pointer;
 }
 
-.button__link {
+.button--link {
   background-color: #756157;
 }
 
-.button__link:hover,
-.button__link:focus {
+.button--link:hover,
+.button--link:focus {
   background-color: #615048;
 }
 
-.button__link:active {
+.button--link:active {
   color: rgba(256, 256, 256, 0.3);
   background-color: #756157;
 }
 
-.button__link--disabled {
+.button--link--disabled {
   background-color: #e5e5e5;
   pointer-events: none;
 }
 
-.button__button {
+.button--button {
   background-color: #82b3d3;
 }
 
-.button__button:hover,
-.button__button:focus {
+.button--button:hover,
+.button--button:focus {
   background-color: #68a2ca;
 }
 
-.button__button:active {
+.button--button:active {
   color: rgba(256, 256, 256, 0.3);
   background-color: #82b3d3;
 }
 
-.button__button:disabled {
+.button--button:disabled {
   background-color: #e5e5e5;
 }
 
-.button__button--favourite {
+.button--button--favourite {
   background-color: #7db54f;
 }
 
-.button__button--favourite:hover,
-.button__button--favourite:focus {
+.button--button--favourite:hover,
+.button--button--favourite:focus {
   background-color: #6c9e42;
 }
 
-.button__button--favourite:active {
+.button--button--favourite:active {
   color: rgba(256, 256, 256, 0.3);
   background-color: #7db54f;
 }
 
-.button__button--favourite:disabled {
+.button--button--favourite:disabled {
   background-color: #e5e5e5;
 }
 
-.button__button--transparent {
+.button--button--transparent {
   background-color: transparent;
 }
 
-.button__button--transparent:hover {
+.button--button--transparent:hover {
   opacity: 0.6;
 }
 
-.button__button--transparent:focus {
+.button--button--transparent:focus {
   opacity: 1;
 }
 
-.button__button--transparent:active {
+.button--button--transparent:active {
   color: rgba(256, 256, 256, 0.3);
 }
 
-.button__button--transparent:disabled {
+.button--button--transparent:disabled {
   color: rgba(256, 256, 256, 0.1);
 }
 
@@ -201,7 +201,7 @@ html {
   line-height: 36px;
 }
 
-.button__button.button--big {
+.button--button.button--big {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -504,7 +504,7 @@ html {
 /* search */
 .search {
   margin: 0;
-  padding: 97px 0 104px;
+  padding: 97px 0 105px;
   text-align: center;
   vertical-align: middle;
 }
@@ -603,7 +603,7 @@ html {
 /* footer */
 .main-footer {
   display: flex;
-  padding: 46px 70px 30px;
+  padding: 44px 70px 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1367,7 +1367,7 @@ html {
 }
 
 /* modal */
-.modal__container {
+.container {
   position: fixed;
   top: 0;
   left: 0;
@@ -1377,22 +1377,19 @@ html {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal--hide {
+.hide-element {
   display: none;
 }
 
 .modal {
   position: relative;
   top: 31px;
+  min-width: 717px;
   padding: 64px 70px;
   margin: auto;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-}
-
-.modal__search-hotel {
-  width: 717px;
 }
 
 .modal__close-button {
@@ -1455,7 +1452,7 @@ html {
   row-gap: 48px;
 }
 
-.label__check-in {
+.label--check-in {
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -1465,7 +1462,7 @@ html {
   grid-row: 1/2;
 }
 
-.label__check-out {
+.label--check-out {
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -1475,7 +1472,7 @@ html {
   grid-row: 2/3;
 }
 
-.label__adults {
+.label--adults {
   grid-column: 1/2;
   grid-row: 3/4;
 }
@@ -1485,7 +1482,7 @@ html {
   grid-row: 3/4;
 }
 
-.label__children {
+.label--children {
   grid-column: 4/5;
   grid-row: 3/4;
   position: relative;
@@ -1604,7 +1601,7 @@ html {
   margin-left: 5px;
 }
 
-.tooltip-toggle {
+.tooltip__toggle {
   width: 26px;
   height: 26px;
   padding: 0;
@@ -1615,15 +1612,15 @@ html {
   cursor: pointer;
 }
 
-.tooltip-toggle:focus {
+.tooltip__toggle:focus {
   outline-color: #82b3d3;
 }
 
-.tooltip-toggle__icon {
+.tooltip__toggle-icon {
   margin-top: 2px;
 }
 
-.input__tooltip-info {
+.label__tooltip-info {
   position: absolute;
   top: 42px;
   left: -57px;
@@ -1640,7 +1637,7 @@ html {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
-.input__tooltip-info::before {
+.label__tooltip-info::before {
   content: "";
   position: absolute;
   top: -9px;
@@ -1650,10 +1647,6 @@ html {
   display: block;
   background-color: #333333;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-.input__tooltip-info--hide {
-  display: none;
 }
 
 .input__button > svg {
