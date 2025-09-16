@@ -1367,7 +1367,7 @@ html {
 }
 
 /* modal */
-.container {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
