@@ -36,20 +36,20 @@
           </ul>
 
           <ul class="navigation__list-icon">
-
             <li class="navigation__item-icon">
               <a class="navigation__link-icon navigation__link-icon--search" href="#">
                 <span class="visually-hidden">Поиск</span>
+                <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679 1.4-1.492Zm-10-2.486c-3.3 0-6-2.685-6-5.967 0-3.282 2.7-5.967 6-5.967s6 2.685 6 5.967c0 3.282-2.7 5.967-6 5.967Z"/></svg>
               </a>
             </li>
 
             <li class="navigation__item-icon">
               <a class="navigation__link-icon navigation__link-icon--favourites" href="#">
                 <span class="visually-hidden">Избранное</span>
+                <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M9.9 19c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C1.4 9.8 1 8.6 1 7.4 1 4.4 3.4 2 6.5 2 7.8 2 9 2.5 10 3.3c1-.8 2.3-1.3 3.5-1.3 3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
                 <span class="navigation__item-number">12</span>
               </a>
             </li>
-
           </ul>
 
           <a class="navigation__reserve-button button button--link" href="#">Хочу сюда!
@@ -63,7 +63,6 @@
           <h1 class="main-inner__header">Гостиницы Cедоны</h1>
 
           <nav class="main-inner__breadcrumbs breadcrumbs">
-
             <ol class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="index.html">
@@ -81,7 +80,6 @@
                 </a>
               </li>
             </ol>
-
           </nav>
 
           <section class="main-inner__filters filters">
@@ -97,7 +95,7 @@
                   <ol class="filters__list infrastructure">
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
-                        <input class="infrastructure__option" type="checkbox" name="swiming-pool" value="on" checked>
+                        <input class="infrastructure__option" type="checkbox" name="infrastructure" value="swiming-pool" checked>
                         <span class="infrastructure__checkbox"></span>
                         Бассейн
                       </label>
@@ -105,7 +103,7 @@
 
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
-                        <input class="infrastructure__option" type="checkbox" name="parking" value="on" checked>
+                        <input class="infrastructure__option" type="checkbox" name="infrastructure" value="parking" checked>
                         <span class="infrastructure__checkbox"></span>
                         Парковка
                       </label>
@@ -113,7 +111,7 @@
 
                     <li class="infrastructure__item">
                       <label class="infrastructure__label filters-label">
-                        <input class="infrastructure__option" type="checkbox" name="wifi" value="off">
+                        <input class="infrastructure__option" type="checkbox" name="infrastructure" value="wifi">
                         <span class="infrastructure__checkbox"></span>
                         Wi-Fi
                       </label>
@@ -136,7 +134,7 @@
 
                     <li class="house-type__item">
                       <label class="house-type__label filters-label">
-                        <input class="house-type__option" type="radio" name="house-type" value="Motel" tabindex="-1" />
+                        <input class="house-type__option" type="radio" name="house-type" value="Motel"/>
                         <span class="house-type__radio"></span>
                         Мотель
                       </label>
@@ -144,14 +142,12 @@
 
                     <li class="house-type__item">
                       <label class="house-type__label filters-label">
-                        <input class="house-type__option" type="radio" name="house-type" value="Apartments"
-                          tabindex="-1" />
+                        <input class="house-type__option" type="radio" name="house-type" value="Apartments"/>
                         <span class="house-type__radio"></span>
                         Апартаменты
                       </label>
                     </li>
                   </ol>
-
                 </fieldset>
               </div>
 
@@ -225,19 +221,19 @@
 
                 <li class="view-settings__view-item">
                   <a class="view-settings__view-link view-settings__view-link--plate view-settings__view-link--active"
-                    href="#">
+                    href="catalog.html?view=tile">
                     <span class="visually-hidden">Показать плитку</span>
                   </a>
                 </li>
 
                 <li class="view-settings__view-item">
-                  <a class="view-settings__view-link view-settings__view-link--card" href="#">
+                  <a class="view-settings__view-link view-settings__view-link--card" href="catalog.html?view=card">
                     <span class="visually-hidden">Показать карточки</span>
                   </a>
                 </li>
 
                 <li class="view-settings__view-item">
-                  <a class="view-settings__view-link view-settings__view-link--list" href="#">
+                  <a class="view-settings__view-link view-settings__view-link--list" href="catalog.html?view=list">
                     <span class="visually-hidden">Показать список</span>
                   </a>
                 </li>
@@ -268,7 +264,7 @@
                 </dl>
 
                 <a class="card__link button button--link" href="#">подробнее</a>
-                <button class="card__favourite button button--button" type="button">в избранное</button>
+                <button class="card__favourite button button--button" type="button" onclick="addFavourite()">в избранное</button>
 
                 <p class="card__rating-stars card__rating-stars--4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
@@ -294,7 +290,7 @@
                 </dl>
 
                 <a class="card__link button button--link" href="#">подробнее</a>
-                <button class="card__favourite button button--button--favourite" type="button">в избранном</button>
+                <button class="card__favourite button button--button--favourite" type="button" onclick="deleteFavourite()">в избранном</button>
 
 
                 <p class="card__rating-stars card__rating-stars--4"><span class="visually-hidden">Четырехзвездочный
@@ -321,7 +317,7 @@
                 </dl>
 
                 <a class="card__link button button--link" href="#">подробнее</a>
-                <button class="card__favourite button button--button" type="button">в избранное</button>
+                <button class="card__favourite button button--button" type="button" onclick="addFavourite()">в избранное</button>
 
                 <p class="card__rating-stars card__rating-stars--3">
                   <span class="visually-hidden">Трехзвездочный отель</span>
@@ -349,7 +345,7 @@
 
 
                 <a class="card__link button button--link" href="#">подробнее</a>
-                <button class="card__favourite button button--button" type="button">в избранное</button>
+                <button class="card__favourite button button--button" type="button" onclick="addFavourite()">в избранное</button>
 
                 <p class="card__rating-stars card__rating-stars--2">
                   <span class="visually-hidden">Двухзвездочный отель</span>
@@ -395,9 +391,8 @@
           </p>
 
           <form class="subscribe__form" method="POST" action="https://echo.htmlacademy.ru">
-            <label>
-              <input class="subscribe__input" type="email" id="email" name="email" placeholder="Ваш e-mail"
-                autocomplete="on" required>
+            <label class="subscribe__label" for="email">
+              <input class="subscribe__input" type="email" id="email" name="email" placeholder="Ваш e-mail" autocomplete="on" required>
             </label>
 
             <button class="subscribe__button button button--button button--big" type="submit">Подписаться</button>
@@ -450,7 +445,10 @@
           </ul>
         </section>
 
-        <a class="main-footer__contact" href="tel:+79992225665">+7 (812) 812-12-12</a>
+        <section  class="contact-info">
+          <h2 class="visually-hidden">Контактная информация</h2>
+          <a class="contact-info__phone" href="tel:+79992225665">+7 (812) 812-12-12</a>
+        </section>
         <a class="main-footer__link-logo" href="https://htmlacademy.ru/study">
 
           <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="currentColor"
