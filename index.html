@@ -170,7 +170,7 @@
           <p class="search__title title title--uppercase">Заинтересовались?</p>
           <p class="search__subtitle subtitle">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
             предложения гостиниц в Седоне</p>
-          <button class="search__button button button--big button--link" onclick="openModal()">поиск гостиницы в седоне</button>
+          <button class="search__button button button--big button--link">поиск гостиницы в седоне</button>
         </section>
 
         <section class="subscribe">
@@ -253,7 +253,7 @@
 
     <!-- Для отображения модального окна нужно удалить класс hide-element -->
 
-    <div class="modal hide-element">
+    <div class="modal ">
       <div class="modal__container">
 
         <button class="modal__close-button" type="button">
@@ -267,7 +267,7 @@
 
             <label class="form__label label label--check-in" for="check-in-date">Дата заезда:</label>
             <p class="form__input-container input">
-              <input class="form__input input__check-in" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" autofocus required>
+              <input class="form__input input__check-in" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020" placeholder="Укажите дату" autofocus required>
               <span class="visually-hidden">Введите дату заезда в гостиницу</span>
               <span class="input__message input__message--error">Мы не можем отправить вас в прошлое</span>
 
@@ -313,7 +313,7 @@
 
             <label class="form__label label label--check-out" for="check-out-date">Дата выезда:</label>
             <p class="form__input-container input">
-              <input class="form__input input__check-out" type="text" name="check-out-date" id="check-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
+              <input class="form__input input__check-out" type="text" name="check-out-date" id="check-out-date" value="1 сентября 2023" placeholder="Укажите дату" required>
               <span class="visually-hidden">Введите дату выезда из гостиницы</span>
               <span class="input__message input__message--info">На эти даты есть свободные номера. Пока есть.</span>
               <svg class="input__icon input__icon--calendar" width="20" height="21" viewBox="0 0 20 21" fill="none"

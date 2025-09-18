@@ -1725,8 +1725,7 @@ html {
 /* modal */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1743,6 +1742,7 @@ html {
   position: relative;
   top: 31px;
   min-width: 717px;
+  max-width: 1000px;
   padding: 64px 70px;
   margin: auto;
   background-color: #ffffff;
@@ -2065,7 +2065,6 @@ html {
   border-radius: 10px;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  /* overflow-y: scroll; */
 }
 
 .tooltip__info::before {
